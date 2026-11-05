@@ -53,7 +53,10 @@ h1 { font-size: 2rem; margin: 0 0 8px; }
 h2 { font-size: 1.25rem; margin: 40px 0 12px; }
 h3 { font-size: 1.05rem; margin: 0 0 4px; }
 
-.pixel { font-family: "Pixelify Sans", system-ui, sans-serif; font-weight: 600; }
+/* Pixelify Sans es mas baja que la letra del sistema: se agranda para que el titulo destaque */
+.pixel { font-family: "Pixelify Sans", system-ui, sans-serif; font-weight: 600; letter-spacing: .02em; }
+h1.pixel { font-size: 3rem; line-height: 1.1; }
+h3.pixel { font-size: 1.9rem; line-height: 1.1; margin-bottom: 4px; }
 
 .subtitulo { color: var(--texto-suave); margin: 0; }
 
@@ -128,4 +131,5 @@ footer {
 @media (max-width: 520px) {
   .destacado { flex-direction: column; align-items: flex-start; }
   h1 { font-size: 1.6rem; }
+  h1.pixel { font-size: 2.4rem; }
 }

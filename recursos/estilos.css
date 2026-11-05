@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("PixelifySans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:root {
+  --fondo: #f6f1ea;
+  --superficie: #fffaf3;
+  --texto: #2b2420;
+  --texto-suave: #6b5f57;
+  --borde: #e2d6c8;
+  --acento: #8a4b2f;
+  --acento-suave: #f0e1d4;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #1c1816;
+    --superficie: #25201d;
+    --texto: #eee6de;
+    --texto-suave: #b3a79d;
+    --borde: #3a322d;
+    --acento: #e0a17f;
+    --acento-suave: #3a2a22;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+}
+
+a { color: var(--acento); }
+a:hover { text-decoration-thickness: 2px; }
+
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 2rem; margin: 0 0 8px; }
+h2 { font-size: 1.25rem; margin: 40px 0 12px; }
+h3 { font-size: 1.05rem; margin: 0 0 4px; }
+
+.pixel { font-family: "Pixelify Sans", system-ui, sans-serif; font-weight: 600; }
+
+.subtitulo { color: var(--texto-suave); margin: 0; }
+
+.migas { font-size: .9rem; margin-bottom: 32px; }
+.migas a { text-decoration: none; }
+
+.tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.destacado {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.destacado img {
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+.destacado p { margin: 4px 0 12px; }
+
+.enlaces { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+
+.boton {
+  display: inline-block;
+  background: var(--acento);
+  color: var(--superficie);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.boton:hover { opacity: .9; }
+
+.proyectos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+.proyectos li { padding: 16px 20px; }
+.proyectos p { margin: 0; color: var(--texto-suave); font-size: .95rem; }
+.etiqueta {
+  display: inline-block;
+  font-size: .75rem;
+  background: var(--acento-suave);
+  color: var(--texto);
+  padding: 1px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.politica h2 { font-size: 1.1rem; margin-top: 28px; }
+.politica ul { padding-left: 20px; }
+.idiomas { margin: 16px 0 32px; }
+hr { border: 0; border-top: 1px solid var(--borde); margin: 48px 0; }
+
+footer {
+  color: var(--texto-suave);
+  font-size: .85rem;
+  margin-top: 56px;
+}
+
+@media (max-width: 520px) {
+  .destacado { flex-direction: column; align-items: flex-start; }
+  h1 { font-size: 1.6rem; }
+}
